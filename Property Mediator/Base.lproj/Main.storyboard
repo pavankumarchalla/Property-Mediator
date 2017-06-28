@@ -25,15 +25,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cZg-MP-U7S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_category" translatesAutoresizingMaskIntoConstraints="NO" id="Rse-SK-Ksi">
+                                <rect key="frame" x="42" y="242" width="100" height="100"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_clients" translatesAutoresizingMaskIntoConstraints="NO" id="gSV-xC-2Xp">
                                 <rect key="frame" x="193" y="74" width="100" height="100"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="remind" translatesAutoresizingMaskIntoConstraints="NO" id="hkE-nB-C3d">
                                 <rect key="frame" x="193" y="396" width="100" height="100"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ic_category" translatesAutoresizingMaskIntoConstraints="NO" id="Rse-SK-Ksi">
-                                <rect key="frame" x="42" y="242" width="100" height="100"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Client" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3H-6E-eBh">
+                                <rect key="frame" x="193" y="182" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -42,6 +48,8 @@
                             <constraint firstItem="gSV-xC-2Xp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="4Lf-wd-tRk"/>
                             <constraint firstAttribute="trailing" secondItem="cZg-MP-U7S" secondAttribute="trailing" id="5CD-GS-9OU"/>
                             <constraint firstItem="hkE-nB-C3d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="300" id="9FF-rh-KLw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L3H-6E-eBh" secondAttribute="trailing" constant="20" id="Dm8-uH-srX"/>
+                            <constraint firstItem="L3H-6E-eBh" firstAttribute="top" secondItem="gSV-xC-2Xp" secondAttribute="bottom" constant="10" id="KyV-Ve-0BT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hkE-nB-C3d" secondAttribute="trailing" constant="20" id="Oua-ns-vgw"/>
                             <constraint firstItem="Rse-SK-Ksi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Ova-6L-ZQG"/>
                             <constraint firstItem="cZg-MP-U7S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tsq-RX-kM2"/>
