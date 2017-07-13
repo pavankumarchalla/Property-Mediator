@@ -1,16 +1,16 @@
 //
-//  AddPhotoViewController.swift
+//  AddClientViewController.swift
 //  Property Mediator
 //
-//  Created by Raja Mohamed on 11/07/17.
+//  Created by Raja Mohamed on 13/07/17.
 //  Copyright © 2017 sedintechnologies. All rights reserved.
 //
 
 import UIKit
 
-class AddPhotoViewController: UIViewController {
+class AddClientViewController: UIViewController {
 
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func navigateToBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
@@ -19,12 +19,9 @@ class AddPhotoViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
-    }
-    
+
 
 }

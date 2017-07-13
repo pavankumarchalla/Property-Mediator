@@ -10,6 +10,9 @@ import UIKit
 
 class WebViewController: UIViewController {
 
+    @IBAction func goBack(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     @IBOutlet weak var webView: UIWebView!
 
