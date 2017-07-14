@@ -40,10 +40,11 @@ class ViewController: UIViewController {
     }
     
     func navigateToAddPhoto(){
-        let vc = storyboard!.instantiateViewController(withIdentifier: "AddPhotoViewController") as! AddPhotoViewController
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.present(navigationController, animated: true, completion: nil)
-    }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddPhotoViewController") as! AddPhotoViewController
+        navigationController?.pushViewController(vc,animated: true)
+            }
 
 
 }
