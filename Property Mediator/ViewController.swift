@@ -12,19 +12,25 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var propertyNewsAction: UIImageView!
     @IBOutlet weak var addPhotoAction: UIImageView!
+    @IBOutlet weak var addClientAction: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let singlePropertyNewsTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToPropertyNews))
-         let photoActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToAddPhoto))
+        let photoActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToAddPhoto))
+        let clientActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToAddClient))
         singlePropertyNewsTap.numberOfTapsRequired = 1
         photoActionTap.numberOfTapsRequired = 1
         propertyNewsAction.isUserInteractionEnabled = true
         propertyNewsAction.addGestureRecognizer(singlePropertyNewsTap)
         addPhotoAction.isUserInteractionEnabled = true
         addPhotoAction.addGestureRecognizer(photoActionTap)
-        
-        
+        addClientAction.isUserInteractionEnabled = true
+        addClientAction.addGestureRecognizer(clientActionTap)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
 
     }
 
@@ -34,17 +40,23 @@ class ViewController: UIViewController {
     
     
     func navigateToPropertyNews(){
-        let vc = storyboard!.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.present(navigationController, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        navigationController?.pushViewController(vc,animated: true)
     }
     
     func navigateToAddPhoto(){
-        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AddPhotoViewController") as! AddPhotoViewController
         navigationController?.pushViewController(vc,animated: true)
-            }
+    }
+
+    
+    func navigateToAddClient(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddClientViewController") as! AddClientViewController
+        navigationController?.pushViewController(vc,animated: true)
+    }
 
 
 }
