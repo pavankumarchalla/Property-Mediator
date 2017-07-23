@@ -132,11 +132,12 @@
                         <outlet property="propertyNewsAction" destination="uoY-sH-rfE" id="z79-Ah-2jC"/>
                         <segue destination="UJO-UL-jhd" kind="show" id="3HM-XO-Oao"/>
                         <segue destination="qVT-yS-hpG" kind="show" id="5G4-P9-CfG"/>
+                        <segue destination="bg1-L4-3wZ" kind="show" id="gz9-ET-jEf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="-123.59154929577466"/>
+            <point key="canvasLocation" x="-4361" y="851"/>
         </scene>
         <!--Add Client-->
         <scene sceneID="9X7-9d-brf">
@@ -150,49 +151,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zYp-e1-djd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03T-17-MHu">
-                                <rect key="frame" x="82" y="296" width="156" height="33"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="VIEW">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-hb-nmt">
-                                <rect key="frame" x="82" y="239" width="156" height="33"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bk-77-xqA">
+                                <rect key="frame" x="-2" y="64" width="322" height="504"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="EXp-nF-Vbo">
+                                        <rect key="frame" x="-139" y="0.0" width="600" height="504"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03T-17-MHu">
+                                        <rect key="frame" x="83" y="183" width="156" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="VIEW">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-hb-nmt">
+                                        <rect key="frame" x="83" y="284" width="156" height="33"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="g24-R6-8Yc"/>
+                                            <constraint firstAttribute="width" constant="156" id="iab-NU-ZpI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="ADD">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="g24-R6-8Yc"/>
-                                    <constraint firstAttribute="width" constant="156" id="iab-NU-ZpI"/>
+                                    <constraint firstItem="Xgp-hb-nmt" firstAttribute="width" secondItem="03T-17-MHu" secondAttribute="width" id="C7t-dJ-Ja5"/>
+                                    <constraint firstAttribute="bottom" secondItem="EXp-nF-Vbo" secondAttribute="bottom" id="CMh-14-hKp"/>
+                                    <constraint firstItem="03T-17-MHu" firstAttribute="top" secondItem="3Bk-77-xqA" secondAttribute="top" constant="183" id="Iue-iN-Fau"/>
+                                    <constraint firstItem="03T-17-MHu" firstAttribute="centerX" secondItem="3Bk-77-xqA" secondAttribute="centerX" id="NTq-Ag-ajW"/>
+                                    <constraint firstItem="EXp-nF-Vbo" firstAttribute="top" secondItem="3Bk-77-xqA" secondAttribute="top" id="SOI-Iz-dJq"/>
+                                    <constraint firstItem="03T-17-MHu" firstAttribute="centerX" secondItem="EXp-nF-Vbo" secondAttribute="centerX" id="XS0-L0-ERs"/>
+                                    <constraint firstItem="Xgp-hb-nmt" firstAttribute="centerX" secondItem="03T-17-MHu" secondAttribute="centerX" id="dLf-Il-Z22"/>
+                                    <constraint firstItem="Xgp-hb-nmt" firstAttribute="top" secondItem="03T-17-MHu" secondAttribute="bottom" constant="68" id="x0E-Ru-uWi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="ADD">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="03T-17-MHu" firstAttribute="centerY" secondItem="WIj-H1-WrT" secondAttribute="centerY" multiplier="1.1" id="Kz4-xi-tjd"/>
-                            <constraint firstItem="03T-17-MHu" firstAttribute="width" secondItem="Xgp-hb-nmt" secondAttribute="width" id="Lor-35-DRE"/>
-                            <constraint firstItem="zYp-e1-djd" firstAttribute="top" secondItem="WIj-H1-WrT" secondAttribute="top" id="M4F-EO-c0U"/>
-                            <constraint firstAttribute="bottom" secondItem="zYp-e1-djd" secondAttribute="bottom" id="NhY-aN-av1"/>
-                            <constraint firstItem="Xgp-hb-nmt" firstAttribute="centerX" secondItem="WIj-H1-WrT" secondAttribute="centerX" id="PwS-9u-Jx8"/>
-                            <constraint firstAttribute="trailing" secondItem="zYp-e1-djd" secondAttribute="trailing" id="nBI-xJ-rgj"/>
-                            <constraint firstItem="03T-17-MHu" firstAttribute="height" secondItem="Xgp-hb-nmt" secondAttribute="height" id="oYG-Au-wWG"/>
-                            <constraint firstItem="03T-17-MHu" firstAttribute="centerX" secondItem="Xgp-hb-nmt" secondAttribute="centerX" id="pXN-Dg-dh5"/>
-                            <constraint firstItem="Xgp-hb-nmt" firstAttribute="centerY" secondItem="WIj-H1-WrT" secondAttribute="centerY" multiplier="0.9" id="yIB-GU-U7g"/>
-                            <constraint firstItem="zYp-e1-djd" firstAttribute="leading" secondItem="WIj-H1-WrT" secondAttribute="leading" id="zqv-2X-gsS"/>
+                            <constraint firstItem="3Bk-77-xqA" firstAttribute="top" secondItem="VSQ-wA-t2g" secondAttribute="bottom" id="7iI-Nc-3gS"/>
+                            <constraint firstAttribute="bottom" secondItem="3Bk-77-xqA" secondAttribute="bottom" id="8Lo-xl-0Ro"/>
+                            <constraint firstAttribute="trailing" secondItem="3Bk-77-xqA" secondAttribute="trailing" id="ai1-RN-Xf5"/>
+                            <constraint firstItem="3Bk-77-xqA" firstAttribute="leading" secondItem="WIj-H1-WrT" secondAttribute="leadingMargin" constant="-18" id="lCs-po-qHc"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Add Client" id="WVS-CJ-MHZ">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="tE3-IH-nUm">
+                    <navigationItem key="navigationItem" title="Add Client" id="5aT-Cm-mNF">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="dz3-R2-Wad">
                             <connections>
-                                <action selector="navigateToBack:" destination="bg1-L4-3wZ" id="nLQ-w0-QbD"/>
+                                <action selector="backButton:" destination="bg1-L4-3wZ" id="p6A-p8-pNZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -200,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZW3-qk-wa7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829.375" y="-973.94366197183103"/>
+            <point key="canvasLocation" x="2700" y="-1007.7464788732394"/>
         </scene>
         <!--Add Photo-->
         <scene sceneID="Y4o-cf-1jA">
@@ -472,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62e-KZ-zZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2572.5" y="596.83098591549299"/>
+            <point key="canvasLocation" x="2310" y="704"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gce-aK-7yu">
@@ -486,12 +497,11 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Uzk-NG-dTA"/>
-                        <segue destination="bg1-L4-3wZ" kind="show" id="Xl1-YL-jdn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcl-fh-OaJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1208" y="-196"/>
+            <point key="canvasLocation" x="-4866" y="-125"/>
         </scene>
     </scenes>
     <resources>

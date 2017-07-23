@@ -10,16 +10,21 @@ import UIKit
 
 class AddClientViewController: UIViewController {
 
-    @IBAction func navigateToBack(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
-    override func viewDidLoad() {
+    
+       override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
 
