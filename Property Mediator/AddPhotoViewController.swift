@@ -11,8 +11,7 @@ import UIKit
 class AddPhotoViewController: UIViewController {
 
     @IBAction func cancel(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-        
+    _ = navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,7 @@ import UIKit
 class WebViewController: UIViewController {
 
     @IBAction func goBack(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+      _ = navigationController?.popViewController(animated: true)
     }
     
     @IBOutlet weak var webView: UIWebView!
@@ -25,6 +25,12 @@ class WebViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = false
+    }
+
     
 
    

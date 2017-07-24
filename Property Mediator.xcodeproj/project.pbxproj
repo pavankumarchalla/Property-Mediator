@@ -10,6 +10,7 @@
 		632C52341F153FD400C45087 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C52331F153FD400C45087 /* AddPhotoViewController.swift */; };
 		632C52361F15465900C45087 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C52351F15465900C45087 /* WebViewController.swift */; };
 		632C52381F175EF500C45087 /* AddClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C52371F175EF500C45087 /* AddClientViewController.swift */; };
+		A8AD0E221F2607DD002447AF /* ClientFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD0E211F2607DD002447AF /* ClientFormViewController.swift */; };
 		A8B9CB7B1F038D4D00A73039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9CB7A1F038D4D00A73039 /* AppDelegate.swift */; };
 		A8B9CB7D1F038D4D00A73039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9CB7C1F038D4D00A73039 /* ViewController.swift */; };
 		A8B9CB801F038D4E00A73039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B9CB7E1F038D4E00A73039 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		632C52331F153FD400C45087 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		632C52351F15465900C45087 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		632C52371F175EF500C45087 /* AddClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClientViewController.swift; sourceTree = "<group>"; };
+		A8AD0E211F2607DD002447AF /* ClientFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientFormViewController.swift; sourceTree = "<group>"; };
 		A8B9CB771F038D4D00A73039 /* Property Mediator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Property Mediator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B9CB7A1F038D4D00A73039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8B9CB7C1F038D4D00A73039 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				A8B9CB811F038D4E00A73039 /* Property_Mediator.xcdatamodeld */,
 				632C52331F153FD400C45087 /* AddPhotoViewController.swift */,
 				632C52371F175EF500C45087 /* AddClientViewController.swift */,
+				A8AD0E211F2607DD002447AF /* ClientFormViewController.swift */,
 			);
 			path = "Property Mediator";
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				A8B9CB7B1F038D4D00A73039 /* AppDelegate.swift in Sources */,
 				632C52361F15465900C45087 /* WebViewController.swift in Sources */,
 				A8B9CB831F038D4E00A73039 /* Property_Mediator.xcdatamodeld in Sources */,
+				A8AD0E221F2607DD002447AF /* ClientFormViewController.swift in Sources */,
 				632C52381F175EF500C45087 /* AddClientViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
