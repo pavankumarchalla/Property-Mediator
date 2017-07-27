@@ -11,17 +11,25 @@ import RealmSwift
 
 class ContactsDBHelper {
     
+    init() {
+
+    }
+    
     
     // Function to get list of all the contacts
     func getContacts() -> Results<Contacts> {
         let contacts = try! Realm().objects(Contacts.self)
+        print(contacts.count)
         return contacts
     }
     
     // Function to add a contact
     
-    func addnewContact(name : String,email:String,notes:String,
-                       pan:String,phone:String) {
+    func addnewContact(name : String,
+                       email : String,
+                       notes : String,
+                       pan : String,
+                       phone : String) {
         let realm = try! Realm()
         
         try! realm.write {

@@ -10,11 +10,14 @@ import UIKit
 
 class AddClientViewController: UIViewController {
 
-    @IBAction func navigateToClient(_ sender: Any) {
+    @IBAction func addAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ClientFormViewController") as! ClientFormViewController
         navigationController?.pushViewController(vc,animated: true)
+
     }
+   
+    
     @IBAction func backButton(_ sender: Any) {
       _ = navigationController?.popViewController(animated: true)
     }

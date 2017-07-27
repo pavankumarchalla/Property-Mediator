@@ -16,6 +16,8 @@ class ClientFormViewController: UIViewController {
     @IBOutlet weak var panNumber: UITextField!
     @IBOutlet weak var nameInputBox: UITextField!
     
+    
+    
     @IBAction func saveAction(_ sender: Any) {
         if (nameInputBox.text?.isEmpty)! {
             showAlertView(alert: "Please Enter Name")
@@ -38,6 +40,14 @@ class ClientFormViewController: UIViewController {
             showAlertView(alert: "Please Enter Notes")
             return
         }
+        let contactDBHelper = ContactsDBHelper()
+        contactDBHelper.addnewContact(name: nameInputBox.text!, email: emailAddress.text!,
+                                      notes: notesInput.text!,
+                                      pan: panNumber.text!,
+                                      phone: phoneNumber.text!)
+        print("Client Details Added Successfully")
+        cancelAction((Any).self)
+        
         
         
     }
@@ -47,6 +57,9 @@ class ClientFormViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let contactDBHelper = ContactsDBHelper()
+        contactDBHelper.getContacts()
+
 
     }
 
