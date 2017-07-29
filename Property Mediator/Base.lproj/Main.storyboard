@@ -135,6 +135,7 @@
                         <segue destination="bg1-L4-3wZ" kind="show" id="gz9-ET-jEf"/>
                         <segue destination="1Z5-tP-1fH" kind="show" identifier="addclient" id="QNC-MW-yA7"/>
                         <segue destination="BcM-OD-utJ" kind="show" id="VD5-X0-kri"/>
+                        <segue destination="NOG-6i-tf2" kind="show" id="mXJ-4I-aCr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -144,7 +145,7 @@
         <!--View Clients-->
         <scene sceneID="9X7-9d-brf">
             <objects>
-                <viewController storyboardIdentifier="AddClientViewController" id="bg1-L4-3wZ" customClass="AddClientViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewClientsViewController" id="bg1-L4-3wZ" customClass="ViewClientsViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VSQ-wA-t2g"/>
                         <viewControllerLayoutGuide type="bottom" id="iaM-js-mGZ"/>
@@ -235,12 +236,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZW3-qk-wa7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1462.5" y="-611.61971830985919"/>
+            <point key="canvasLocation" x="-2334" y="-556"/>
         </scene>
-        <!--Add Photo-->
+        <!--View Property-->
+        <scene sceneID="3wO-ia-Zo4">
+            <objects>
+                <viewController storyboardIdentifier="ViewPropertyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NOG-6i-tf2" customClass="ViewPropertyViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UeR-dK-eqW"/>
+                        <viewControllerLayoutGuide type="bottom" id="RQT-w5-yUd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="50A-ov-wPl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="View Property" id="KKQ-XD-yDw">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="dSW-b4-Ele"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rey-4M-BWV"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7P-fw-eui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1898" y="209"/>
+        </scene>
+        <!--Add Property-->
         <scene sceneID="Y4o-cf-1jA">
             <objects>
-                <viewController restorationIdentifier="AddPhotoViewController" storyboardIdentifier="AddPhotoViewController" id="qVT-yS-hpG" customClass="AddPhotoViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AddPhotoViewController" storyboardIdentifier="AddPhotoViewController" id="qVT-yS-hpG" customClass="AddPropertyViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PsI-sD-eX4"/>
                         <viewControllerLayoutGuide type="bottom" id="M6j-uI-bmX"/>
@@ -405,7 +428,7 @@
                             <constraint firstItem="XRf-pS-Ubc" firstAttribute="leading" secondItem="TWu-or-Ll4" secondAttribute="leadingMargin" constant="-16" id="iVq-Pq-g9E"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Photo" id="1ih-a2-W4T">
+                    <navigationItem key="navigationItem" title="Add Property" id="1ih-a2-W4T">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="adr-m7-LsI">
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
@@ -419,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePR-iF-7pL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-885" y="124.64788732394366"/>
+            <point key="canvasLocation" x="-885" y="208"/>
         </scene>
         <!--Property News-->
         <scene sceneID="jTs-0b-3vX">
@@ -458,7 +481,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62e-KZ-zZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-885" y="828"/>
+            <point key="canvasLocation" x="-885" y="918"/>
         </scene>
         <!--Client Form-->
         <scene sceneID="MQy-3X-95z">
@@ -699,7 +722,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oe2-Mz-fs4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-885" y="1536"/>
+            <point key="canvasLocation" x="-885" y="1653"/>
         </scene>
     </scenes>
     <resources>

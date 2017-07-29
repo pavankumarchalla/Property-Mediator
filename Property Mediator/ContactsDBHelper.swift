@@ -31,7 +31,6 @@ class ContactsDBHelper {
                        pan : String,
                        phone : String) {
         let realm = try! Realm()
-        
         try! realm.write {
             let contacts = Contacts()
             contacts.email = email

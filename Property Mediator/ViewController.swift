@@ -18,8 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let singlePropertyNewsTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToPropertyNews))
-        let photoActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToAddPhoto))
-        let clientActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToAddClient))
+        let photoActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToProperty))
+        let clientActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToClient))
         let remainderActionTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.navigateToRemainder))
         singlePropertyNewsTap.numberOfTapsRequired = 1
         photoActionTap.numberOfTapsRequired = 1
@@ -49,9 +49,9 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(vc,animated: true)
     }
     
-    func navigateToAddPhoto(){
+    func navigateToProperty(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AddPhotoViewController") as! AddPhotoViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewPropertyViewController") as! ViewPropertyViewController
         navigationController?.pushViewController(vc,animated: true)
     }
 
@@ -62,9 +62,9 @@ class ViewController: UIViewController {
     }
 
     
-    func navigateToAddClient(){
+    func navigateToClient(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AddClientViewController") as! AddClientViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewClientsViewController") as! ViewClientsViewController
         navigationController?.pushViewController(vc,animated: true)
     }
 

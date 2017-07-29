@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPhotoViewController: UIViewController {
+class ViewPropertyViewController: UIViewController {
 
     @IBAction func cancel(_ sender: Any) {
     _ = navigationController?.popViewController(animated: true)
