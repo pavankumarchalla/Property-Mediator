@@ -10,6 +10,11 @@ import UIKit
 
 class AddPropertyViewController: UIViewController {
 
+    @IBAction func cancel(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    @IBAction func saveProperty(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -10,9 +10,16 @@ import UIKit
 
 class ViewPropertyViewController: UIViewController {
 
-    @IBAction func cancel(_ sender: Any) {
-    _ = navigationController?.popViewController(animated: true)
+    @IBAction func back(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)        
     }
+    @IBAction func bjbb(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddPropertyViewController") as! AddPropertyViewController
+        navigationController?.pushViewController(vc,animated: true)
+        
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     }

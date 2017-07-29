@@ -58,10 +58,7 @@ class AddClientViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let contactDBHelper = ContactsDBHelper()
-        contactDBHelper.getContacts()
-
-
+        
     }
 
     override func didReceiveMemoryWarning() {
