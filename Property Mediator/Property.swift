@@ -17,6 +17,5 @@ class Property: Object {
     dynamic var propertydetails : String = ""
     dynamic var phone : String = ""
     dynamic var email :String = ""
-    dynamic var imageList : Array<NSData> = []
 
 }
