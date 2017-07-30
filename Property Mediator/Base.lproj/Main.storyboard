@@ -458,6 +458,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="galleryBtn" destination="kzJ-cM-bdF" id="h7Z-Z0-9IG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePR-iF-7pL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
