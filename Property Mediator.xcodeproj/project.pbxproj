@@ -20,6 +20,7 @@
 		A823F1CC1F3836A300D22CF2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A823F1CB1F3836A300D22CF2 /* Realm.framework */; };
 		A823F1CE1F3836AB00D22CF2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A823F1CD1F3836AB00D22CF2 /* RealmSwift.framework */; };
 		A823F1D01F383C8C00D22CF2 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823F1CF1F383C8C00D22CF2 /* ImageCollectionCell.swift */; };
+		A823F1D21F38666E00D22CF2 /* PropertyDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823F1D11F38666E00D22CF2 /* PropertyDBHelper.swift */; };
 		A8AD0E221F2607DD002447AF /* AddClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD0E211F2607DD002447AF /* AddClientViewController.swift */; };
 		A8B9CB7B1F038D4D00A73039 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9CB7A1F038D4D00A73039 /* AppDelegate.swift */; };
 		A8B9CB7D1F038D4D00A73039 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9CB7C1F038D4D00A73039 /* ViewController.swift */; };
@@ -69,6 +70,7 @@
 		A823F1CB1F3836A300D22CF2 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Library/Developer/Xcode/DerivedData/Property_Mediator-hkeucmkvqpumqlfnjkbowqnhdtnh/Build/Products/Debug-iphonesimulator/Realm/Realm.framework"; sourceTree = "<group>"; };
 		A823F1CD1F3836AB00D22CF2 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/Property_Mediator-hkeucmkvqpumqlfnjkbowqnhdtnh/Build/Products/Debug-iphonesimulator/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		A823F1CF1F383C8C00D22CF2 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
+		A823F1D11F38666E00D22CF2 /* PropertyDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDBHelper.swift; sourceTree = "<group>"; };
 		A8AD0E211F2607DD002447AF /* AddClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClientViewController.swift; sourceTree = "<group>"; };
 		A8B9CB771F038D4D00A73039 /* Property Mediator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Property Mediator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B9CB7A1F038D4D00A73039 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				6372FEB41F2A66CB002F76ED /* ContactsDBHelper.swift */,
+				A823F1D11F38666E00D22CF2 /* PropertyDBHelper.swift */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				A8B9CB7B1F038D4D00A73039 /* AppDelegate.swift in Sources */,
 				632C52361F15465900C45087 /* WebViewController.swift in Sources */,
 				6372FEBE1F2D1192002F76ED /* Property.swift in Sources */,
+				A823F1D21F38666E00D22CF2 /* PropertyDBHelper.swift in Sources */,
 				A823F1D01F383C8C00D22CF2 /* ImageCollectionCell.swift in Sources */,
 				A8B9CB831F038D4E00A73039 /* Property_Mediator.xcdatamodeld in Sources */,
 				A8AD0E221F2607DD002447AF /* AddClientViewController.swift in Sources */,
