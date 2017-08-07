@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Property Mediator/Contacts.swift"
+            timestampString = "523531043.753434"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.__ivar_destroyer"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.183181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.__allocating_init () -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.186813"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.init () -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.190633"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.init (value : Any) -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.193292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.__allocating_init (value : Any) -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.195977"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.__allocating_init (realm : __ObjC.RLMRealm, schema : __ObjC.RLMObjectSchema) -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.1982"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.init (realm : __ObjC.RLMRealm, schema : __ObjC.RLMObjectSchema) -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.20035"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.__allocating_init (value : Any, schema : __ObjC.RLMSchema) -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.202548"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Property_Mediator.Contacts.init (value : Any, schema : __ObjC.RLMSchema) -&gt; Property_Mediator.Contacts"
+                  moduleName = "Property Mediator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rajamohamed/Documents/Property-Mediator/Property%20Mediator/Contacts.swift"
+                  timestampString = "523778062.204852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
