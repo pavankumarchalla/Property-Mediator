@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextFieldDelegate {
     
     @IBOutlet weak var galleryBtn: UIButton!
     
@@ -25,6 +25,11 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var txtFieldAddress: UITextField!
     
     @IBOutlet weak var txtViewPropertyDetails: UITextView!
+    
+    @IBOutlet weak var viewForImgViewBackground: UIView!
+    
+    @IBOutlet weak var imgViewForCollectionImages: UIImageView!
+    
     
     var picker:UIImagePickerController?=UIImagePickerController()
     
@@ -76,6 +81,12 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         let property = PropertyDBHelper()
         print(property.getProperty())
         
+        viewForImgViewBackground.isHidden = true
+        imgViewForCollectionImages.isHidden = true
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissImageViewAndBackgroundView(sender:)))
+        viewForImgViewBackground.addGestureRecognizer(gesture)
+        viewForImgViewBackground.isUserInteractionEnabled = true
     }
     
 
@@ -100,9 +111,12 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
     
+    func dismissImageViewAndBackgroundView(sender : UITapGestureRecognizer){
+        imgViewForCollectionImages.isHidden = true
+        viewForImgViewBackground.isHidden = true
+    }
     
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageArray.append(image)
             collectionView.reloadData()
@@ -134,7 +148,13 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        viewForImgViewBackground.isHidden = false
+        imgViewForCollectionImages.isHidden = false
+        
+        imgViewForCollectionImages.image = imageArray[indexPath.row]
     }
+    
+  
     
     func showAlertView(alert:String) {
         let alertView = UIAlertController(title: "Validation Error", message: alert, preferredStyle: .alert)
