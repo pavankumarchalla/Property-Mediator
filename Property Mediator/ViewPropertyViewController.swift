@@ -47,6 +47,10 @@ class ViewPropertyViewController: UIViewController, UITableViewDelegate, UITable
             object.email = element.email
             object.id = element.id
             object.phone = element.phone
+            object.address = element.address
+            object.folderId = element.folderId
+            object.propertydetails = element.propertydetails
+            object.propertyType = element.propertyType
             propertyList.append(object)
         }
         self.propertyTableVIew.reloadData()

@@ -64,7 +64,7 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         }
         
         let property = PropertyDBHelper()
-        let uuId = randomAlphaNumericString(length: 8)
+        let uuId = randomAlphaNumericString(length: 6)
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let dataPath = documentsDirectory.appendingPathComponent(uuId)
     
@@ -77,6 +77,7 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
                 let pngImageData = UIImagePNGRepresentation(item)
                 try pngImageData?.write(to: appendedString, options: .atomic)
             }
+            
             property.addnewProperty(ownerName: txtFiledOwnerName.text!,
                                     email: txtFieldEmail.text!,
                                     address: txtFieldAddress.text!,
@@ -84,8 +85,7 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
                                     phone: txtFieldPhoneNo.text!,
                                     propertyType: propetyType.selectedSegmentIndex + 1,
                                     folderId:uuId)
-            
-            
+            self.navigationController?.popViewController(animated: true)
         } catch let error  {
             print(error.localizedDescription);
         }
