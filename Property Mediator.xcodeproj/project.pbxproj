@@ -16,6 +16,7 @@
 		6372FEB71F2AD2A5002F76ED /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372FEB61F2AD2A5002F76ED /* ContactTableViewCell.swift */; };
 		6372FEBA1F2CFD1A002F76ED /* AddPropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372FEB91F2CFD1A002F76ED /* AddPropertyViewController.swift */; };
 		6372FEBE1F2D1192002F76ED /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372FEBD1F2D1192002F76ED /* Property.swift */; };
+		63B388181F4193480011B912 /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B388171F4193480011B912 /* PropertyTableViewCell.swift */; };
 		7A41028286316D96C1C7288C /* Pods_Property_MediatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3444E0BB944979ED2F1A44D /* Pods_Property_MediatorUITests.framework */; };
 		A823F1CC1F3836A300D22CF2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A823F1CB1F3836A300D22CF2 /* Realm.framework */; };
 		A823F1CE1F3836AB00D22CF2 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A823F1CD1F3836AB00D22CF2 /* RealmSwift.framework */; };
@@ -64,6 +65,7 @@
 		6372FEB61F2AD2A5002F76ED /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		6372FEB91F2CFD1A002F76ED /* AddPropertyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPropertyViewController.swift; sourceTree = "<group>"; };
 		6372FEBD1F2D1192002F76ED /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		63B388171F4193480011B912 /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		6E57D6F38E77080127658E04 /* Pods_Property_Mediator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Property_Mediator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FBD601D7A9B78E0B1C243DC /* Pods-Property MediatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Property MediatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Property MediatorTests/Pods-Property MediatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		94A37DA90E94E85AD978E9E9 /* Pods-Property Mediator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Property Mediator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Property Mediator/Pods-Property Mediator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				A823F1CF1F383C8C00D22CF2 /* ImageCollectionCell.swift */,
 				6372FEB61F2AD2A5002F76ED /* ContactTableViewCell.swift */,
+				63B388171F4193480011B912 /* PropertyTableViewCell.swift */,
 			);
 			name = tablecells;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				6372FEAC1F2A5B26002F76ED /* RemainderViewController.swift in Sources */,
 				6372FEB51F2A66CB002F76ED /* ContactsDBHelper.swift in Sources */,
 				632C52381F175EF500C45087 /* ViewClientsViewController.swift in Sources */,
+				63B388181F4193480011B912 /* PropertyTableViewCell.swift in Sources */,
 				6372FEBA1F2CFD1A002F76ED /* AddPropertyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
