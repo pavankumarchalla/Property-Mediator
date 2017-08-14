@@ -257,7 +257,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h7E-8N-14m" id="R6I-Dg-q9h">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone No : 9994267918" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqa-D0-5X9">
@@ -814,7 +814,7 @@
         <!--Remainder-->
         <scene sceneID="DBk-5E-U7d">
             <objects>
-                <viewController storyboardIdentifier="RemainderViewController" id="BcM-OD-utJ" customClass="RemainderViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewRemainderViewController" id="BcM-OD-utJ" customClass="ViewRemainderViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rpz-YA-S7W"/>
                         <viewControllerLayoutGuide type="bottom" id="r1I-km-iNS"/>
@@ -826,47 +826,53 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XF-aP-b50">
                                 <rect key="frame" x="-2" y="64" width="377" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="giL-5s-Dms">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-Sf-oAw">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="603"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnO-EO-VvN">
-                                        <rect key="frame" x="110.5" y="183" width="156" height="33"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="VIEW REMAINDER">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-DC-xmC">
-                                        <rect key="frame" x="110.5" y="284" width="156" height="33"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="e2r-Iz-7yO"/>
-                                            <constraint firstAttribute="width" constant="156" id="oCs-zh-5Ot"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="ADD REMAINDER">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="navigateToClient:" destination="BcM-OD-utJ" eventType="touchUpInside" id="fnh-eE-Evx"/>
-                                        </connections>
-                                    </button>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RemainderTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RemainderTableViewCell" rowHeight="70" id="VUo-yB-9Y7" customClass="RemainderTableViewCell" customModule="Property_Mediator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="377" height="70"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VUo-yB-9Y7" id="bbK-Ip-Hp5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="69.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remainder Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxj-RY-7Jg">
+                                                            <rect key="frame" x="18" y="-2" width="341" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due on 29/05/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kar-EX-gks">
+                                                            <rect key="frame" x="18" y="22.5" width="341" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="kar-EX-gks" secondAttribute="trailing" constant="10" id="FDN-WW-vrf"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="Fxj-RY-7Jg" secondAttribute="trailing" constant="10" id="Ne9-v8-uLJ"/>
+                                                        <constraint firstItem="Fxj-RY-7Jg" firstAttribute="leading" secondItem="bbK-Ip-Hp5" secondAttribute="leadingMargin" constant="10" id="Y6C-qJ-zdB"/>
+                                                        <constraint firstItem="kar-EX-gks" firstAttribute="leading" secondItem="bbK-Ip-Hp5" secondAttribute="leadingMargin" constant="10" id="dlO-kC-Rev"/>
+                                                        <constraint firstItem="kar-EX-gks" firstAttribute="top" secondItem="Fxj-RY-7Jg" secondAttribute="bottom" constant="5" id="fu1-fI-3tn"/>
+                                                        <constraint firstAttribute="topMargin" secondItem="Fxj-RY-7Jg" secondAttribute="top" constant="10" id="pHc-bP-vxJ"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="remainderDate" destination="kar-EX-gks" id="3xN-4J-lT8"/>
+                                                    <outlet property="remainderDescriptino" destination="Fxj-RY-7Jg" id="VfD-is-GZB"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Uo8-DC-xmC" firstAttribute="top" secondItem="dnO-EO-VvN" secondAttribute="bottom" constant="68" id="0k0-Nb-7Qs"/>
-                                    <constraint firstItem="dnO-EO-VvN" firstAttribute="centerX" secondItem="9XF-aP-b50" secondAttribute="centerX" id="3PX-zy-zPp"/>
-                                    <constraint firstItem="giL-5s-Dms" firstAttribute="leading" secondItem="9XF-aP-b50" secondAttribute="leading" id="Isa-3M-GQK"/>
-                                    <constraint firstItem="dnO-EO-VvN" firstAttribute="centerX" secondItem="giL-5s-Dms" secondAttribute="centerX" id="MTt-iA-mop"/>
-                                    <constraint firstAttribute="bottom" secondItem="giL-5s-Dms" secondAttribute="bottom" id="PUp-q1-fPM"/>
-                                    <constraint firstAttribute="bottom" secondItem="giL-5s-Dms" secondAttribute="bottom" id="SSF-bM-weB"/>
-                                    <constraint firstItem="Uo8-DC-xmC" firstAttribute="centerX" secondItem="dnO-EO-VvN" secondAttribute="centerX" id="SlU-4X-qde"/>
-                                    <constraint firstItem="Uo8-DC-xmC" firstAttribute="width" secondItem="dnO-EO-VvN" secondAttribute="width" id="j3d-cW-1cP"/>
-                                    <constraint firstItem="giL-5s-Dms" firstAttribute="top" secondItem="9XF-aP-b50" secondAttribute="top" id="kbl-zH-gOS"/>
-                                    <constraint firstItem="giL-5s-Dms" firstAttribute="top" secondItem="9XF-aP-b50" secondAttribute="top" id="nY8-hd-PeH"/>
-                                    <constraint firstAttribute="trailing" secondItem="giL-5s-Dms" secondAttribute="trailing" id="riX-rQ-ALW"/>
-                                    <constraint firstItem="dnO-EO-VvN" firstAttribute="top" secondItem="9XF-aP-b50" secondAttribute="top" constant="183" id="uyf-oR-QYg"/>
+                                    <constraint firstAttribute="bottom" secondItem="hkO-Sf-oAw" secondAttribute="bottom" id="Aqz-CV-rhx"/>
+                                    <constraint firstAttribute="trailing" secondItem="hkO-Sf-oAw" secondAttribute="trailing" id="L2W-Yr-g9f"/>
+                                    <constraint firstItem="hkO-Sf-oAw" firstAttribute="leading" secondItem="9XF-aP-b50" secondAttribute="leading" id="e89-nY-d5a"/>
+                                    <constraint firstItem="hkO-Sf-oAw" firstAttribute="top" secondItem="9XF-aP-b50" secondAttribute="top" id="fgr-2r-3mt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -885,12 +891,16 @@
                                 <action selector="backButtton:" destination="BcM-OD-utJ" id="vtP-If-FFd"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="01c-AO-aG7"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="remainderTableView" destination="hkO-Sf-oAw" id="BUM-bc-HjZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oe2-Mz-fs4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-885" y="1653"/>
+            <point key="canvasLocation" x="-885.60000000000002" y="1652.9235382308848"/>
         </scene>
     </scenes>
     <resources>

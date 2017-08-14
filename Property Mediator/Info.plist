@@ -24,6 +24,8 @@
 	<string>LaunchScreen</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) photos and video use.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>$(PRODUCT_NAME) remainder use.</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

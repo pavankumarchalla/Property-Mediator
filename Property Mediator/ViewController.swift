@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 
     func navigateToRemainder(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RemainderViewController") as! RemainderViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ViewRemainderViewController") as! ViewRemainderViewController
         navigationController?.pushViewController(vc,animated: true)
     }
 
