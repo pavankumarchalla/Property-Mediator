@@ -16,7 +16,7 @@ class PropertyDBHelper {
     }
     
     
-    // Function to get list of all the contacts
+//     Function to get list of all the contacts
     func getProperty() -> Results<Property> {
         let property = try! Realm().objects(Property.self)
         print(property.count)
@@ -25,15 +25,16 @@ class PropertyDBHelper {
     
     // Function to add a contact
     
-    func addnewProperty(ownerName : String,
+    func addnewProperty(primaryKey : String,
+                        ownerName : String,
                        email : String,
                        address : String,
                        propertyDetails : String,
-                       phone : String,
-        image : Array<NSData>) {
+                       phone : String) {
         let realm = try! Realm()
         try! realm.write {
             let property = Property()
+            property.id = primaryKey
             property.email = email
             property.address = address
             property.ownername = ownerName

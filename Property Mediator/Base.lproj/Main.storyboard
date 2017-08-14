@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T74-eN-JcJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T74-eN-JcJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -131,7 +131,6 @@
                         <outlet property="propertyNewsAction" destination="uoY-sH-rfE" id="z79-Ah-2jC"/>
                         <outlet property="remainderAction" destination="hkE-nB-C3d" id="51f-MG-2fa"/>
                         <segue destination="UJO-UL-jhd" kind="show" id="3HM-XO-Oao"/>
-                        <segue destination="qVT-yS-hpG" kind="show" id="5G4-P9-CfG"/>
                         <segue destination="bg1-L4-3wZ" kind="show" id="gz9-ET-jEf"/>
                         <segue destination="1Z5-tP-1fH" kind="show" identifier="addclient" id="QNC-MW-yA7"/>
                         <segue destination="BcM-OD-utJ" kind="show" id="VD5-X0-kri"/>
@@ -165,7 +164,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="377" height="90"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4vg-LG-Jvx" id="7aS-1A-uv7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="89.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone No : 9994267918" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-HS-c7B">
@@ -438,7 +437,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.61102552816901412" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="r1d-b7-F8m" firstAttribute="centerX" secondItem="SZd-Lk-Oum" secondAttribute="centerX" id="BCr-uf-5v0"/>
                                             <constraint firstAttribute="trailing" secondItem="r1d-b7-F8m" secondAttribute="trailing" constant="42" id="acb-5X-fTR"/>
                                             <constraint firstItem="r1d-b7-F8m" firstAttribute="top" secondItem="SZd-Lk-Oum" secondAttribute="top" constant="30" id="eIq-eu-cdI"/>
                                             <constraint firstItem="r1d-b7-F8m" firstAttribute="leading" secondItem="SZd-Lk-Oum" secondAttribute="leading" constant="41" id="taK-0d-fWM"/>
@@ -833,7 +831,4 @@
         <image name="photo" width="70" height="65"/>
         <image name="remind" width="70" height="70"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4NP-gD-ApO"/>
-    </inferredMetricsTieBreakers>
 </document>

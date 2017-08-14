@@ -35,7 +35,6 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
     
     var imageArray : Array<UIImage> = []
     
-    var imageNameArray : Array<NSData> = []
     
     @IBAction func cancel(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
@@ -64,8 +63,31 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         }
         
         let property = PropertyDBHelper()
+        let uuId = "aggagaga"
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let dataPath = documentsDirectory.appendingPathComponent(uuId)
+        
+        do {
+            try FileManager.default.createDirectory(atPath: dataPath.path, withIntermediateDirectories: true, attributes: nil)
+
+            for item in imageArray {
+                let imageName =  String(format: "%d.png",imageArray.index(of: item)!)
+                let appendedString = dataPath.appendingPathComponent(imageName)
+                let pngImageData = UIImagePNGRepresentation(item)
+                try pngImageData?.write(to: appendedString, options: .atomic)
+            }
+            property.addnewProperty(primaryKey:uuId,
+                                    ownerName: txtFiledOwnerName.text!,
+                                    email: txtFieldEmail.text!,
+                                    address: txtFieldAddress.text!,
+                                    propertyDetails: txtViewPropertyDetails.text,
+                                    phone: txtFieldPhoneNo.text!)
+            
+        } catch let error  {
+            print(error.localizedDescription);
+        }
     
-        property.addnewProperty(ownerName: txtFiledOwnerName.text!, email: txtFieldEmail.text!, address: txtFieldAddress.text!, propertyDetails: txtViewPropertyDetails.text, phone: txtFieldPhoneNo.text!, image: imageNameArray)
+       
         
         
 
@@ -78,8 +100,12 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         galleryBtn.addTarget(self, action:#selector(self.openGallery), for: .touchUpInside)
         collectionView.isHidden = true
         constraintTopCollectionView.constant = 30
-        let property = PropertyDBHelper()
-        print(property.getProperty())
+        
+        let concurrentQueue = DispatchQueue(label: "queuename", attributes: .concurrent)
+        concurrentQueue.sync {
+           let property = PropertyDBHelper()
+            print(property.getProperty())
+        }
         
         viewForImgViewBackground.isHidden = true
         imgViewForCollectionImages.isHidden = true
@@ -116,14 +142,13 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         viewForImgViewBackground.isHidden = true
     }
     
-     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+       func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageArray.append(image)
             collectionView.reloadData()
             collectionView.isHidden = false
             constraintTopCollectionView.constant = 8
             collectionView.backgroundColor = UIColor.clear
-            imageNameArray.append(NSData(data: UIImagePNGRepresentation(image)!))
             print(imageArray)
         } else{
             print("Something went wrong")
@@ -150,7 +175,7 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         
         viewForImgViewBackground.isHidden = false
         imgViewForCollectionImages.isHidden = false
-        
+
         imgViewForCollectionImages.image = imageArray[indexPath.row]
     }
     
@@ -161,6 +186,21 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alertView, animated: true, completion: nil)
         
+    }
+    
+    func randomAlphaNumericString(length: Int) -> String {
+        let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let allowedCharsCount = UInt32(allowedChars.characters.count)
+        var randomString = ""
+        
+        for _ in 0..<length {
+            let randomNum = Int(arc4random_uniform(allowedCharsCount))
+            let randomIndex = allowedChars.index(allowedChars.startIndex, offsetBy: randomNum)
+            let newCharacter = allowedChars[randomIndex]
+            randomString += String(newCharacter)
+        }
+        
+        return randomString
     }
 
 }
