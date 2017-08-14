@@ -249,7 +249,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2V-32-2KD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2V-32-2KD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -308,11 +308,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageCount" destination="QMR-1G-yhE" id="bKr-nV-Cx1"/>
-                                            <outlet property="landTYpe" destination="abl-Cv-QTh" id="Mdn-hc-fMl"/>
-                                            <outlet property="name" destination="oCm-zA-sXd" id="Z1c-At-kFU"/>
                                             <outlet property="ownerName" destination="oCm-zA-sXd" id="40o-Ee-4iN"/>
-                                            <outlet property="phone" destination="oqa-D0-5X9" id="ya4-hv-2ZJ"/>
                                             <outlet property="phoneNumber" destination="oqa-D0-5X9" id="qbH-D8-9wH"/>
+                                            <outlet property="propertyType" destination="abl-Cv-QTh" id="Gee-a0-LN7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -338,6 +336,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="propertyTableVIew" destination="l2V-32-2KD" id="frY-c6-9xC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7P-fw-eui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -598,6 +599,7 @@
                         <outlet property="constraintTopCollectionView" destination="1wv-WI-YwK" id="TDM-dv-3V1"/>
                         <outlet property="galleryBtn" destination="kzJ-cM-bdF" id="h7Z-Z0-9IG"/>
                         <outlet property="imgViewForCollectionImages" destination="r1d-b7-F8m" id="GgK-Ih-tEQ"/>
+                        <outlet property="propetyType" destination="EVt-lI-sOq" id="0iX-aa-aJL"/>
                         <outlet property="txtFieldAddress" destination="V6I-gZ-OJJ" id="3sC-9p-sxF"/>
                         <outlet property="txtFieldEmail" destination="Deo-bG-aaO" id="BZo-Pe-0CQ"/>
                         <outlet property="txtFieldPhoneNo" destination="PS0-f1-HyO" id="HSL-Go-fDx"/>

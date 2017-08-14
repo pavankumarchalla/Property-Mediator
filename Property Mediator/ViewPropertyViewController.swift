@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewPropertyViewController: UIViewController {
+class ViewPropertyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var propertyTableVIew: UITableView!
+    var propertyList = [Property]()
+
 
     @IBAction func back(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)        
@@ -23,8 +27,31 @@ class ViewPropertyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
+        propertyTableVIew.delegate = self
+        propertyTableVIew.dataSource = self
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.loadProperty()
+    }
+    
+    
+    func loadProperty()  {
+        propertyList.removeAll()
+        let propertyHelper = PropertyDBHelper()
+        let result = propertyHelper.getProperty()
+        for element in result {
+            let object = Property()
+            object.ownername = element.ownername
+            object.email = element.email
+            object.id = element.id
+            object.phone = element.phone
+            propertyList.append(object)
+        }
+        self.propertyTableVIew.reloadData()
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,6 +61,30 @@ class ViewPropertyViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return propertyList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "PropertyTableViewCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PropertyTableViewCell
+        let item = propertyList[indexPath.row]
+        cell.ownerName.text = item.ownername
+        cell.phoneNumber.text = "Ph No : "+item.phone
+        cell.propertyType.text = (item.propertyType == 1 ? "HOME" : "LAND")
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let dataPath = documentsUrl.appendingPathComponent(item.folderId)
+        let directoryContents = try!FileManager.default.contentsOfDirectory(at: dataPath, includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions.skipsSubdirectoryDescendants)
+        cell.imageCount.text = String(directoryContents.count)  + " Images"
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
     
 
 }

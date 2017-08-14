@@ -10,6 +10,7 @@ import UIKit
 
 class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextFieldDelegate {
     
+    @IBOutlet weak var propetyType: UISegmentedControl!
     @IBOutlet weak var galleryBtn: UIButton!
     
     @IBOutlet weak var constraintTopCollectionView: NSLayoutConstraint!
@@ -63,10 +64,10 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         }
         
         let property = PropertyDBHelper()
-        let uuId = "aggagaga"
+        let uuId = randomAlphaNumericString(length: 8)
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let dataPath = documentsDirectory.appendingPathComponent(uuId)
-        
+    
         do {
             try FileManager.default.createDirectory(atPath: dataPath.path, withIntermediateDirectories: true, attributes: nil)
 
@@ -76,21 +77,18 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
                 let pngImageData = UIImagePNGRepresentation(item)
                 try pngImageData?.write(to: appendedString, options: .atomic)
             }
-            property.addnewProperty(primaryKey:uuId,
-                                    ownerName: txtFiledOwnerName.text!,
+            property.addnewProperty(ownerName: txtFiledOwnerName.text!,
                                     email: txtFieldEmail.text!,
                                     address: txtFieldAddress.text!,
                                     propertyDetails: txtViewPropertyDetails.text,
-                                    phone: txtFieldPhoneNo.text!)
+                                    phone: txtFieldPhoneNo.text!,
+                                    propertyType: propetyType.selectedSegmentIndex + 1,
+                                    folderId:uuId)
+            
             
         } catch let error  {
             print(error.localizedDescription);
         }
-    
-       
-        
-        
-
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,7 +140,7 @@ class AddPropertyViewController: UIViewController,UIImagePickerControllerDelegat
         viewForImgViewBackground.isHidden = true
     }
     
-       func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageArray.append(image)
             collectionView.reloadData()

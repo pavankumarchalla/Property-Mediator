@@ -25,21 +25,24 @@ class PropertyDBHelper {
     
     // Function to add a contact
     
-    func addnewProperty(primaryKey : String,
+    func addnewProperty(
                         ownerName : String,
                        email : String,
                        address : String,
                        propertyDetails : String,
-                       phone : String) {
+                       phone : String,
+                       propertyType :Int,
+                       folderId:String) {
         let realm = try! Realm()
         try! realm.write {
             let property = Property()
-            property.id = primaryKey
             property.email = email
             property.address = address
             property.ownername = ownerName
             property.propertydetails = propertyDetails
             property.phone = phone
+            property.propertyType = propertyType
+            property.folderId = folderId
             realm.add(property)
         }
     }

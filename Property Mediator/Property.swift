@@ -11,12 +11,18 @@ import RealmSwift
 
 class Property: Object {
     
-    dynamic var id : String = ""
+     static let  PROPERTY_TYPE_HOUSE = 1
+     static let PROPERTY_TYPE_LAND = 2
+    
+    dynamic var id = UUID().uuidString
+    dynamic var propertyType :Int = 0
     dynamic var ownername:String = ""
     dynamic var address :String = ""
     dynamic var propertydetails : String = ""
     dynamic var phone : String = ""
     dynamic var email :String = ""
+    dynamic var folderId : String = ""
+    
     
 
 }

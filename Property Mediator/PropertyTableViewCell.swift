@@ -10,8 +10,8 @@ import UIKit
 
 class PropertyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var propertyType: UILabel!
     @IBOutlet weak var ownerName: UILabel!
-    @IBOutlet weak var landType: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var imageCount: UILabel!
 
