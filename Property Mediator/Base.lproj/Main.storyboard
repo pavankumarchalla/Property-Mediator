@@ -651,6 +651,77 @@
             </objects>
             <point key="canvasLocation" x="-885" y="918"/>
         </scene>
+        <!--Add Remainder-->
+        <scene sceneID="0oj-OO-oFL">
+            <objects>
+                <viewController storyboardIdentifier="AddRemainderViewController" id="W5B-Zl-IKB" customClass="AddRemainderViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S4g-gE-xQG"/>
+                        <viewControllerLayoutGuide type="bottom" id="q7c-8v-bfQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u7D-E3-f6H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remainder Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pho-q7-w9P">
+                                <rect key="frame" x="26" y="84" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="prC-wB-YGS">
+                                <rect key="frame" x="20" y="115" width="335" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="bdJ-K3-GgX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                        <color key="value" red="0.1051964777523155" green="0.060000883595568461" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7f-Ir-4r1">
+                                <rect key="frame" x="26" y="265" width="323" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bC2-Rx-MUv">
+                                <rect key="frame" x="26" y="296" width="323" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bC2-Rx-MUv" firstAttribute="leading" secondItem="u7D-E3-f6H" secondAttribute="leadingMargin" constant="10" id="1Ae-J5-NTT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bC2-Rx-MUv" secondAttribute="trailing" constant="10" id="1Lb-mm-gcG"/>
+                            <constraint firstAttribute="trailing" secondItem="prC-wB-YGS" secondAttribute="trailing" constant="20" id="Az6-MS-psw"/>
+                            <constraint firstItem="b7f-Ir-4r1" firstAttribute="top" secondItem="prC-wB-YGS" secondAttribute="bottom" constant="20" id="Dt0-i6-qk9"/>
+                            <constraint firstItem="b7f-Ir-4r1" firstAttribute="leading" secondItem="u7D-E3-f6H" secondAttribute="leadingMargin" constant="10" id="S6O-zv-fjb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pho-q7-w9P" secondAttribute="trailing" constant="10" id="STr-sk-HPW"/>
+                            <constraint firstItem="prC-wB-YGS" firstAttribute="top" secondItem="pho-q7-w9P" secondAttribute="bottom" constant="10" id="hYk-oa-sk0"/>
+                            <constraint firstItem="prC-wB-YGS" firstAttribute="leading" secondItem="u7D-E3-f6H" secondAttribute="leading" constant="20" id="hq6-Ej-b8v"/>
+                            <constraint firstItem="bC2-Rx-MUv" firstAttribute="top" secondItem="b7f-Ir-4r1" secondAttribute="bottom" constant="10" id="iIS-pe-m1a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b7f-Ir-4r1" secondAttribute="trailing" constant="10" id="lII-xA-iiV"/>
+                            <constraint firstItem="pho-q7-w9P" firstAttribute="top" secondItem="S4g-gE-xQG" secondAttribute="bottom" constant="20" id="sgO-4Y-fik"/>
+                            <constraint firstItem="pho-q7-w9P" firstAttribute="leading" secondItem="u7D-E3-f6H" secondAttribute="leadingMargin" constant="10" id="xP0-5B-49e"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add Remainder" id="vM4-GC-7gp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="z69-EL-wKv"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQG-cc-Ni1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="1079.9100449775112"/>
+        </scene>
         <!--Client Form-->
         <scene sceneID="MQy-3X-95z">
             <objects>
@@ -830,21 +901,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="603"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RemainderTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RemainderTableViewCell" rowHeight="70" id="VUo-yB-9Y7" customClass="RemainderTableViewCell" customModule="Property_Mediator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="377" height="70"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RemainderTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RemainderTableViewCell" rowHeight="80" id="VUo-yB-9Y7" customClass="RemainderTableViewCell" customModule="Property_Mediator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="377" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VUo-yB-9Y7" id="bbK-Ip-Hp5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="69.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remainder Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxj-RY-7Jg">
-                                                            <rect key="frame" x="18" y="-2" width="341" height="19.5"/>
+                                                            <rect key="frame" x="18" y="10" width="341" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due on 29/05/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kar-EX-gks">
-                                                            <rect key="frame" x="18" y="22.5" width="341" height="14.5"/>
+                                                            <rect key="frame" x="18" y="32.5" width="341" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -855,8 +926,8 @@
                                                         <constraint firstAttribute="trailingMargin" secondItem="Fxj-RY-7Jg" secondAttribute="trailing" constant="10" id="Ne9-v8-uLJ"/>
                                                         <constraint firstItem="Fxj-RY-7Jg" firstAttribute="leading" secondItem="bbK-Ip-Hp5" secondAttribute="leadingMargin" constant="10" id="Y6C-qJ-zdB"/>
                                                         <constraint firstItem="kar-EX-gks" firstAttribute="leading" secondItem="bbK-Ip-Hp5" secondAttribute="leadingMargin" constant="10" id="dlO-kC-Rev"/>
-                                                        <constraint firstItem="kar-EX-gks" firstAttribute="top" secondItem="Fxj-RY-7Jg" secondAttribute="bottom" constant="5" id="fu1-fI-3tn"/>
-                                                        <constraint firstAttribute="topMargin" secondItem="Fxj-RY-7Jg" secondAttribute="top" constant="10" id="pHc-bP-vxJ"/>
+                                                        <constraint firstItem="kar-EX-gks" firstAttribute="top" secondItem="Fxj-RY-7Jg" secondAttribute="bottom" constant="3" id="fu1-fI-3tn"/>
+                                                        <constraint firstAttribute="topMargin" secondItem="Fxj-RY-7Jg" secondAttribute="top" constant="-2" id="pHc-bP-vxJ"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -891,7 +962,11 @@
                                 <action selector="backButtton:" destination="BcM-OD-utJ" id="vtP-If-FFd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="01c-AO-aG7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="01c-AO-aG7">
+                            <connections>
+                                <segue destination="W5B-Zl-IKB" kind="show" id="bJC-fv-n2P"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
