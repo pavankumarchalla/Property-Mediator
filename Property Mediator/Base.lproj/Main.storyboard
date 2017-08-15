@@ -715,8 +715,21 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Remainder" id="vM4-GC-7gp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="z69-EL-wKv"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="z69-EL-wKv">
+                            <connections>
+                                <action selector="cancel:" destination="W5B-Zl-IKB" id="VBr-Uq-QzC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="aKp-cP-RGm">
+                            <connections>
+                                <action selector="saveRemainder:" destination="W5B-Zl-IKB" id="iQT-ns-J29"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueDateTime" destination="bC2-Rx-MUv" id="pxI-6r-NJ8"/>
+                        <outlet property="remainderDescription" destination="prC-wB-YGS" id="kl2-mM-UOU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQG-cc-Ni1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
