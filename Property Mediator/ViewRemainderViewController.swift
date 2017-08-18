@@ -21,9 +21,13 @@ class ViewRemainderViewController: UIViewController,UITableViewDataSource,UITabl
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
+        self.eventStore = EKEventStore()
+        self.reminders = [EKReminder]()
         self.automaticallyAdjustsScrollViewInsets = false
         self.remainderTableView.dataSource = self
         self.remainderTableView.delegate = self
+        self.remainderTableView.reloadData()
 
     }
 
@@ -33,9 +37,6 @@ class ViewRemainderViewController: UIViewController,UITableViewDataSource,UITabl
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
-        self.eventStore = EKEventStore()
-        self.reminders = [EKReminder]()
         self.eventStore.requestAccess(to: EKEntityType.reminder, completion:{
             (accessGranted: Bool, error: Error?) in
             
@@ -55,6 +56,8 @@ class ViewRemainderViewController: UIViewController,UITableViewDataSource,UITabl
                 })
             }
         })
+        self.remainderTableView.reloadData()
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

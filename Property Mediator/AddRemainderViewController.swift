@@ -44,12 +44,25 @@ class AddRemainderViewController: UIViewController {
         
         datePicker = UIDatePicker()
         datePicker.addTarget(self, action: #selector(AddRemainderViewController.addDate), for: UIControlEvents.valueChanged)
-        
         datePicker.datePickerMode = UIDatePickerMode.dateAndTime
         dueDateTime.inputView = datePicker
         remainderDescription.becomeFirstResponder()
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(AddRemainderViewController.doneDatePickerPressed))
+        toolBar.setItems([space, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+        dueDateTime.inputAccessoryView = toolBar
+        self.view.addSubview(dueDateTime)
         
-
+    
+    }
+    
+    func doneDatePickerPressed(){
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,7 +70,10 @@ class AddRemainderViewController: UIViewController {
     }
     
     func addDate(){
-        self.dueDateTime.text = self.datePicker.date.description
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm kk"
+        self.dueDateTime.text = dateFormatter.string(from: self.datePicker.date)
     }
 
    
