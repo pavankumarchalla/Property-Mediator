@@ -27,24 +27,14 @@ class ViewRemainderViewController: UIViewController,UITableViewDataSource,UITabl
         self.automaticallyAdjustsScrollViewInsets = false
         self.remainderTableView.dataSource = self
         self.remainderTableView.delegate = self
-        self.remainderTableView.reloadData()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         self.eventStore.requestAccess(to: EKEntityType.reminder, completion:{
             (accessGranted: Bool, error: Error?) in
             
             if accessGranted == true {
-                DispatchQueue.main.async(execute: {
-                    let predicate = self.eventStore.predicateForReminders(in: nil)
-                    self.eventStore.fetchReminders(matching: predicate, completion: {(
-                        reminders: [EKReminder]?) -> Void in
+                let predicate = self.eventStore.predicateForReminders(in: nil)
+                self.eventStore.fetchReminders(matching: predicate, completion: {(
+                    reminders: [EKReminder]?) -> Void in
+                    DispatchQueue.main.async(execute: {
                         self.reminders = reminders
                         self.remainderTableView.reloadData()
                     })
@@ -58,6 +48,16 @@ class ViewRemainderViewController: UIViewController,UITableViewDataSource,UITabl
         })
         self.remainderTableView.reloadData()
 
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

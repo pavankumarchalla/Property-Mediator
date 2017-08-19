@@ -678,9 +678,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
-                                        <color key="value" red="0.1051964777523155" green="0.060000883595568461" blue="0.125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
@@ -910,7 +912,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XF-aP-b50">
                                 <rect key="frame" x="-2" y="64" width="377" height="603"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-Sf-oAw">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-Sf-oAw">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="603"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -921,14 +923,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="377" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remainder Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxj-RY-7Jg">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Remainder Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxj-RY-7Jg">
                                                             <rect key="frame" x="18" y="10" width="341" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due on 29/05/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kar-EX-gks">
-                                                            <rect key="frame" x="18" y="32.5" width="341" height="14.5"/>
+                                                            <rect key="frame" x="18" y="32.5" width="341" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -936,6 +938,7 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailingMargin" secondItem="kar-EX-gks" secondAttribute="trailing" constant="10" id="FDN-WW-vrf"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="kar-EX-gks" secondAttribute="bottom" constant="10" id="GAj-vQ-VWJ"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="Fxj-RY-7Jg" secondAttribute="trailing" constant="10" id="Ne9-v8-uLJ"/>
                                                         <constraint firstItem="Fxj-RY-7Jg" firstAttribute="leading" secondItem="bbK-Ip-Hp5" secondAttribute="leadingMargin" constant="10" id="Y6C-qJ-zdB"/>
                                                         <constraint firstItem="kar-EX-gks" firstAttribute="leading" secondItem="bbK-Ip-Hp5" secondAttribute="leadingMargin" constant="10" id="dlO-kC-Rev"/>
