@@ -135,6 +135,7 @@
                         <segue destination="1Z5-tP-1fH" kind="show" identifier="addclient" id="QNC-MW-yA7"/>
                         <segue destination="BcM-OD-utJ" kind="show" id="VD5-X0-kri"/>
                         <segue destination="NOG-6i-tf2" kind="show" id="mXJ-4I-aCr"/>
+                        <segue destination="jzP-wg-fYb" kind="show" id="BjJ-VB-182"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -650,6 +651,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="62e-KZ-zZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-885" y="918"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="PlQ-ZF-4wR">
+            <objects>
+                <viewController storyboardIdentifier="CategoryViewController" id="jzP-wg-fYb" customClass="CategoryViewController" customModule="Property_Mediator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="baT-ic-ZVB"/>
+                        <viewControllerLayoutGuide type="bottom" id="s0e-Ww-Anu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NHS-io-M7O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Category" id="Esu-be-MgC">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="5H5-LX-LYz"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEv-ua-9sq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2796" y="246"/>
         </scene>
         <!--Add Remainder-->
         <scene sceneID="0oj-OO-oFL">
